@@ -7,9 +7,10 @@
 * Use nested loops
 * Use conditionals
 
-##Summary 
 
- We're going to model something a little silly: an interaction between you and your imaginary deaf grandma.  She exhibits the following inexplicable behavior:
+##Summary
+
+We're going to model something a little silly: an interaction between you and your imaginary deaf grandma. She exhibits the following inexplicable behavior:
 
 1. She can only hear you if you shout at her.
 2. If you say something but don't shout, she'll shout right back: "HUH?! SPEAK UP, SONNY!"
@@ -35,6 +36,7 @@ Get started by editing the `deaf_grandma.rb` file in the source directory.
 To start, verify you can echo user input using [gets](http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html) to prompt the user for input and [puts](http://www.ruby-doc.org/core-2.1.0/IO.html#method-i-puts) to output this input to the screen.
 
 Run your code via the command line (Terminal) like so: `$ ruby deaf_grandma.rb`
+
 
 ###Release 1: Talking
 
