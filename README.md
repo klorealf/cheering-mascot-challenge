@@ -44,7 +44,7 @@ Now, fill out the `deaf_grandma` method (and possibly other methods) to model al
 
 ### Release 2: Changing Requirements 
 
-After you have a program that allows you to leave the conversation with Grandma in a civil way, we're going to add a new requirement. In addition to saying "I love ya, Grandma, but I've got to go." to end the conversation, you also need to silently move away. Set up a new way to exit the program in your method: when two empty lines are entered in succession by the user.(Both conditions for ending the program should be supported!)
+After you have a program that allows you to leave the conversation with Grandma in a civil way, we're going to add a new requirement. In addition to saying "I love ya, Grandma, but I've got to go." to end the conversation, you also need to silently move away. To exit, the user needs to enter two empty lines in succession after saying goodbye.
 
 How does this change your program? How do you record the "state" of your interaction with Grandma?
 
