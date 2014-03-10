@@ -25,7 +25,7 @@ In this challenge, you will model a conversation with a grandmother who's a litt
 
 ##Releases
 
-###Release 0: Deaf Grandma doesn't 'get' it.
+#### Release 0: Working with input and output.
 
 In the `source/deaf_grandma.rb` file, start by verifying that you can echo user input; use the [`gets`](http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html) method to prompt the user for input and then use the [`puts`](http://www.ruby-doc.org/core-2.1.0/IO.html#method-i-puts) method to output it to the screen.
 
@@ -36,15 +36,15 @@ $ ruby deaf_grandma.rb
 ```
 
 
-###Release 1: Talking
+#### Release 1: Conversing with Grandma
 
 Write the `deaf_grandma` method to model the conversation rules above.
 
-### Release 2: Changing Requirements 
+#### Release 2: A second way to end the conversation 
 
 Add a second way to end the conversation.  You can now also end the conversation by silently slipping away.  Model this behavior as entering two empty strings *in a row* when prompted to say something to Grandma.
 
-###Release 3: Getting Creative (Optional)
+#### Release 3: Other scenarios (optional)
 
 Think of a crazy scenario and write a method `deaf_grandma_crazy` which models that scenario.  For example, how might the following real-world scenarios be modeled in your program?
 
