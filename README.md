@@ -1,6 +1,6 @@
-# Deaf Grandma
-
-##Learning Competencies
+# Deaf Grandma 
+ 
+##Learning Competencies 
 
 * Diagram the relationship between the 'real world' and 'code'.
 * Use variables to maintain program state
@@ -20,7 +20,7 @@ In this challenge, you will model a conversation with a grandmother who's a litt
 
 * If you shout at her, she responds by shouting back.  If you say, "HOW ARE YOU, GRANDMA?", Grandma replies, "NO, NOT SINCE 1983!"
 
-*  The conversation ends (e.g., the program exits) only when you say "I LOVE YA, GRANDMA, BUT I'VE GOT TO GO."
+*  The conversation ends (i.e., the program exits) only when you say "I LOVE YA, GRANDMA, BUT I'VE GOT TO GO."
 
 
 ##Releases
@@ -40,7 +40,7 @@ $ ruby deaf_grandma.rb
 
 Write the `deaf_grandma` method to model the conversation rules above.
 
-### Release 2: Changing Requirements
+### Release 2: Changing Requirements 
 
 Add a second way to end the conversation.  You can now also end the conversation by silently slipping away.  Model this behavior as entering two empty strings *in a row* when prompted to say something to Grandma.
 
@@ -52,9 +52,9 @@ Think of a crazy scenario and write a method `deaf_grandma_crazy` which models t
 * What if Grandma's behavior changes depending on her mood? Maybe she's happy in the morning but grumpy at night.
 * What if Grandma wants to pinch your cheeks every time you visit?
 
-##Optimize Your Learning
+##Optimize Your Learning 
 
-Reflect on your code:
+Reflect on your code: 
 
 * Ruby style favors writing concise, single-purpose methods.  Are you writing one gigantic method or breaking down your program into logical units?
 * Is your code easy for humans to read?  Could another of your cohort mates read through your code and know what each line does?
