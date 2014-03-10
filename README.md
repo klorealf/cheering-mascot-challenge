@@ -1,6 +1,6 @@
-# Deaf Grandma 
- 
-##Learning Competencies 
+# Deaf Grandma
+
+##Learning Competencies
 
 * Diagram the relationship between the 'real world' and 'code'.
 * Use variables to maintain program state
@@ -10,65 +10,57 @@
 
 ##Summary
 
-We're going to model something a little silly: an interaction between you and your imaginary deaf grandma. She exhibits the following inexplicable behavior:
+In this challenge, you will model a conversation with a grandmother who's a little hard of hearing.  Here are the rules that your program should follow.
 
-1. She can only hear you if you shout at her.
-2. If you say something but don't shout, she'll shout right back: "HUH?! SPEAK UP, SONNY!"
-3. If you do shout you're also out of luck, because she'll misunderstand you and shout back "NO, NOT SINCE 1983!"
-4. She won't let you leave the room unless you say, politely, "I love ya, Grandma, but I've got to go." She may be deaf, but she can smell rude a mile away.
+* Running the program begins the conversation, and the user should be prompted to say something to Grandma.
 
-How should these behaviors map to code?
+* Shouting is the only way for Grandma to hear you; shout by typing in all caps (e.g., "HI, GRANDMA.").
 
-| "Real" world                          | Code world    |
-| -------------                         | ------------- |
-| Starting a conversation with Grandma  | Running the program via the command line |
-| Speaking to your Grandma              | Reading a line of user input with the [gets method](http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html). |
-| Grandma speaking to you               | Printing a line to the console using the [puts method](http://www.ruby-doc.org/core-1.9.3/IO.html#method-i-puts). |
-| Shouting                              | Either entering or printing text IN ALL CAPS, depending on who is speaking. |
-| Leaving the conversation              | Exiting the program |
+* If you say something to Grandma without shouting, she will shout back and tell you to speak up.  If you say, "How are you, Grandma?", Grandma replies, "HUH!? SPEAK UP, SONNY?".
+
+* If you shout at her, she responds by shouting back.  If you say, "HOW ARE YOU, GRANDMA?", Grandma replies, "NO, NOT SINCE 1983!"
+
+*  The conversation ends (e.g., the program exits) only when you say "I LOVE YA, GRANDMA, BUT I'VE GOT TO GO."
+
 
 ##Releases
 
 ###Release 0: Deaf Grandma doesn't 'get' it.
 
-Get started by editing the `deaf_grandma.rb` file in the source directory.  
+In the `source/deaf_grandma.rb` file, start by verifying that you can echo user input; use the [`gets`](http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html) method to prompt the user for input and then use the [`puts`](http://www.ruby-doc.org/core-2.1.0/IO.html#method-i-puts) method to output it to the screen.
 
-To start, verify you can echo user input using [gets](http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html) to prompt the user for input and [puts](http://www.ruby-doc.org/core-2.1.0/IO.html#method-i-puts) to output this input to the screen.
+Run your code via the command line (Terminal) like so:
 
-Run your code via the command line (Terminal) like so: `$ ruby deaf_grandma.rb`
+```
+$ ruby deaf_grandma.rb
+```
 
 
 ###Release 1: Talking
 
-Now, fill out the `deaf_grandma` method (and possibly other methods) to model all to the talking rules above.
+Write the `deaf_grandma` method to model the conversation rules above.
 
-### Release 2: Changing Requirements 
+### Release 2: Changing Requirements
 
-After you have a program that allows you to leave the conversation with Grandma in a civil way, we're going to add a new requirement. In addition to saying "I love ya, Grandma, but I've got to go." to end the conversation, you also need to silently move away. To exit, the user needs to enter two empty lines in succession after saying goodbye.
-
-How does this change your program? How do you record the "state" of your interaction with Grandma?
+Add a second way to end the conversation.  You can now also end the conversation by silently slipping away.  Model this behavior as entering two empty strings *in a row* when prompted to say something to Grandma.
 
 ###Release 3: Getting Creative (Optional)
 
-Consider some further changes to the rules above.  Let's say we want to model some new behavior in our system.  Think of how these "real world" scenarios might be modeled in "code world."
+Think of a crazy scenario and write a method `deaf_grandma_crazy` which models that scenario.  For example, how might the following real-world scenarios be modeled in your program?
 
-1. How would you model non-verbal actions, like giving your Grandma a hug?
-2. What if Grandma's behavior changed depending on her mood? Maybe she's happy in the morning but grumpy at night.
-3. What if Grandma wants to pinch your cheeks every time you visit?
-4. What other scenarios can you think of?
+* How would you model giving Grandma a hug?
+* What if Grandma's behavior changes depending on her mood? Maybe she's happy in the morning but grumpy at night.
+* What if Grandma wants to pinch your cheeks every time you visit?
 
-Have some fun!  Think of the craziest scenario you can and write a version of Deaf Grandma called `deaf_grandma_crazy` which models that scenario.  
+##Optimize Your Learning
 
+Reflect on your code:
 
-##Optimize Your Learning 
-
-Analyze your code: 
-
-* Are you writing a single, gigantic method or breaking down your program into logical units?
-* Is it easy for you to read your code and know what each line does?
+* Ruby style favors writing concise, single-purpose methods.  Are you writing one gigantic method or breaking down your program into logical units?
+* Is your code easy for humans to read?  Could another of your cohort mates read through your code and know what each line does?
 
 ##Resources
 
-* [user input with 'gets'](http://www.ruby-doc.org/core-2.1.0/IO.html#method-i-puts)
-* [the case statement](http://www.skorks.com/2009/08/how-a-ruby-case-statement-works-and-what-you-can-do-with-it/)
-* [the loop method](http://ruby-doc.org/core-1.9.3/Kernel.html#method-i-loop).
+* [User input with 'gets'](http://www.ruby-doc.org/core-2.1.0/IO.html#method-i-puts)
+* [Case statements](http://www.skorks.com/2009/08/how-a-ruby-case-statement-works-and-what-you-can-do-with-it/)
+* [Loop method](http://ruby-doc.org/core-1.9.3/Kernel.html#method-i-loop).

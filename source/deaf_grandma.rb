@@ -1,14 +1,14 @@
-# Save this file to your computer so you can run it
-# via the command line (Terminal) like so:
+# Run this file via the command line (Terminal) like so:
 #   $ ruby deaf_grandma.rb
 #
-# Your method should wait for user input, which corresponds
-# to you saying something to your Grandma.
+# Your method should get user input which corresponds
+# to you saying something to Grandma. Grandma should respond
+# differently depending on the input you provide, or the
+# program should exit.  See the README file for detailed rules.
 
-# You'll probably want to write other methods, but this
-# encapsulates the core Grandma logic
 def deaf_grandma
 end
 
-# Run our method
-deaf_grandma
+
+deaf_grandma     # This line calls the method you're writing
+
