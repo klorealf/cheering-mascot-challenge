@@ -48,6 +48,8 @@ Take a look at the `source/deaf_grandma.rb` file.  Four empty methods are define
 - **`grandmas_response`**
 
   We'll use the `grandmas_response` method to determine how Grandma will respond to user input.  We'll pass an argument to the method, and the method will return the appropriate response based on the rules for our application.
+  
+RSpec tests have been provided in the file `/source/spec/deaf_grandma_spec.rb` to guide us through writing these methods.  When the tests pass, our methods should be behaving as described.
 
 
 ### Release 1: Conversing with Grandma
