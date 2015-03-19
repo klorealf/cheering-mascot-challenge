@@ -54,7 +54,9 @@ Take a look at the `source/deaf_grandma.rb` file.  Four empty methods are define
 
 After our helper methods are in place, it's time to write the `deaf_grandma` method.  This is the method that is going to coordinate conversations between our users and Grandma.
 
-When we call the `deaf_grandma` method, as is done at the bottom of `source/deaf_grandma.rb` file, we should find ourselves in a conversation that conforms to the rules described in the *Summary*.
+When we call the `deaf_grandma` method, as is done at the bottom of `source/runner.rb` file, we should find ourselves in a conversation that conforms to the rules described in the *Summary*.
+
+To begin a conversation, run `ruby runner.rb` from within the `source` directory.
 
 
 ### Release 2: Changing Specifications

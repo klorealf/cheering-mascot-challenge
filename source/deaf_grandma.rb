@@ -26,9 +26,3 @@ end
 # making use of the other three methods.
 def deaf_grandma
 end
-
-
-
-
-deaf_grandma     # This line calls the method you're writing
-
