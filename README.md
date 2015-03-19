@@ -1,66 +1,76 @@
-# Deaf Grandma 
- 
-##Learning Competencies 
-
-* Diagram the relationship between the 'real world' and 'code'.
-* Use variables to maintain program state
-* Use nested loops
-* Use conditionals
-
+# Deaf Grandma
 
 ##Summary
 
-In this challenge, you will model a conversation with a grandmother who's a little hard of hearing.  Here are the rules that your program should follow.
+In this challenge we will model a conversation based on a handful of rules, which will be explained to you.  we will be writing Ruby, employing and building on the skills that we've already developed.
 
-* Running the program begins the conversation, and the user should be prompted to say something to Grandma.
+The main focus of this challenge is flow control.  For example, we will need to determine how to control how long our program runs.  Or, certain conditions might cause our program to behavior differently than it would under other conditions.  We'll be using these same techniques to write more complex algorithms throughout Dev Bootcamp.
 
-* Shouting is the only way for Grandma to hear you; shout by typing in all caps (e.g., "HI, GRANDMA.").
+In addition to flow control, we'll need to handle user interaction.  We'll have to get input from users and also display text back to the user.  Furthermore were going to practice writing small methods, each of which does one thing.
 
-* If you say something to Grandma without shouting, she will shout back and tell you to speak up.  If you say, "How are you, Grandma?", Grandma replies, "HUH!? SPEAK UP, SONNY?".
+The following resources might be helpful to you.
 
-* If you shout at her, she responds by shouting back.  If you say, "HOW ARE YOU, GRANDMA?", Grandma replies, "NO, NOT SINCE 1983!"
+- [intro to getting user input](http://ruby-doc.org/docs/Tutorial/part_02/user_input.html)
+- [displaying text: puts vs print](http://www.codecademy.com/glossary/ruby/puts-vs-print)
+- [case statements](http://www.skorks.com/2009/08/how-a-ruby-case-statement-works-and-what-you-can-do-with-it/)
+- [loops](http://www.tutorialspoint.com/ruby/ruby_loops.htm)
 
-*  The conversation ends (i.e., the program exits) only when you say "I LOVE YA, GRANDMA, BUT I'VE GOT TO GO."
+
+### Rules
+Here are the rules for how our conversations need to operate.  While these rules might feel a little arbitrary, we are practicing writing to specifications.
+
+
+* Shouting is the only way for Grandma to hear us; we shout by typing in all caps.  If we shout at her, she responds by shouting back.
+
+  For example, if we say, "HOW ARE YOU, GRANDMA?", Grandma replies, "NO, NOT SINCE 1983!".
+
+* If we say something to Grandma without shouting, she will shout back and tell us to speak up.
+
+  If we say, "How are you, Grandma?", Grandma replies, "HUH!? SPEAK UP, SONNY?".
+
+*  The conversation only ends (i.e., the program exits) when we say, "LOVE YA, GRANDMA, BUT GOTTA GO."
 
 
 ##Releases
 
-#### Release 0: Working with input and output.
+### Release 0: Helper Methods
 
-In the `source/deaf_grandma.rb` file, start by verifying that you can echo user input; use the [`gets`](http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html) method to prompt the user for input and then use the [`puts`](http://www.ruby-doc.org/core-2.1.0/IO.html#method-i-puts) method to output it to the screen.
+Take a look at the `source/deaf_grandma.rb` file.  Four empty methods are defined.  During this challenge, we'll flesh these out, and we'll begin with the `say_something`, `grandmas_response`, and `display` methods.  Each of these methods will do one thing, providing a specific piece of functionality that the `deaf_grandma` method will use.
 
-Run your code via the command line (Terminal) like so:
+- **`say_something`**
 
-```
-$ ruby deaf_grandma.rb
-```
+  We'll use the `say_something` method when we need the user to say something to Grandma.  The method should get user input and return that input.
+
+- **`display`**
+
+  We'll use the `display` method when we need to print information for the user to see—for example, Grandma's responses.  The method should take an argument and print it out.
+
+- **`grandmas_response`**
+
+  We'll use the `grandmas_response` method to determine how Grandma will respond to user input.  We'll pass an argument to the method, and the method will return the appropriate response based on the rules for our application.
 
 
-#### Release 1: Conversing with Grandma
+### Release 1: Conversing with Grandma
 
-Write the `deaf_grandma` method to model the conversation rules above.
+After our helper methods are in place, it's time to write the `deaf_grandma` method.  This is the method that is going to coordinate conversations between our users and Grandma.
 
-#### Release 2: A second way to end the conversation 
+When we call the `deaf_grandma` method, as is done at the bottom of `source/deaf_grandma.rb` file, we should find ourselves in a conversation that conforms to the rules described in the *Summary*.
 
-Add a second way to end the conversation.  You can now also end the conversation by silently slipping away.  Model this behavior as entering two empty strings *in a row* when prompted to say something to Grandma.
 
-#### Release 3: Other scenarios (optional)
+### Release 2: Changing Specifications
 
-Think of a crazy scenario and write a method `deaf_grandma_crazy` which models that scenario.  For example, how might the following real-world scenarios be modeled in your program?
+- The conversation ends if nothing is said to Grandma two times in a row.
 
-* How would you model giving Grandma a hug?
-* What if Grandma's behavior changes depending on her mood? Maybe she's happy in the morning but grumpy at night.
-* What if Grandma wants to pinch your cheeks every time you visit?
+The rules have changed.  We now need a second way to end a conversation (i.e., exit the program).  Users can end the conversation by silently slipping away.
 
-##Optimize Your Learning 
+Update the `deaf_grandma` method to model this behavior: when prompted to say something to Grandma, entering an empty string *twice in a row* causes the program to exit.
 
-Reflect on your code: 
 
-* Ruby style favors writing concise, single-purpose methods.  Are you writing one gigantic method or breaking down your program into logical units?
-* Is your code easy for humans to read?  Could another of your cohort mates read through your code and know what each line does?
+## Conclusion
 
-##Resources
+We wrote a small program that conforms to a set of prescribed specifications.  Writing code to match specifications is a skill, and we'll be practicing it going forward.
 
-* [User input with 'gets'](http://www.ruby-doc.org/core-2.1.0/IO.html#method-i-puts)
-* [Case statements](http://www.skorks.com/2009/08/how-a-ruby-case-statement-works-and-what-you-can-do-with-it/)
-* [Loop method](http://ruby-doc.org/core-1.9.3/Kernel.html#method-i-loop).
+In order to get the specified functionality, we had to control the flow of our application, causing it to behave appropriately under different conditions.  In addition, we combined the behaviors of small methods to create a more complex behavior.  We'll want to continue that going forward.
+
+Finally, before moving on, read through your code.  Is your code easy for humans to read?  Are your variable names descriptive of their values?  Does your indentation conform to Ruby conventions?  Could another of your cohort mates read through your code and know what each line does?
+
