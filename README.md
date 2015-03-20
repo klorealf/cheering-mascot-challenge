@@ -2,9 +2,9 @@
 
 ##Summary
 
-In this challenge we will model a conversation based on a handful of rules, which will be explained to you.  we will be writing Ruby, employing and building on the skills that we've already developed.
+In this challenge we'll model a conversation based on a handful of rules, which will be explained to you.  We will be writing Ruby, employing and building on the skills that we've already developed.
 
-The main focus of this challenge is flow control.  For example, we will need to determine how to control how long our program runs.  Or, certain conditions might cause our program to behavior differently than it would under other conditions.  We'll be using these same techniques to write more complex algorithms throughout Dev Bootcamp.
+The main focus of this challenge is flow control.  For example, we will need to determine how to control how long our program runs.  And, our program will  behave differently under one condition than it will under another.  We'll be using these same techniques to write more complex algorithms throughout Dev Bootcamp.
 
 In addition to flow control, we'll need to handle user interaction.  We'll have to get input from users and also display text back to the user.  Furthermore were going to practice writing small methods, each of which does one thing.
 
@@ -48,7 +48,7 @@ Take a look at the `source/deaf_grandma.rb` file.  Four empty methods are define
 - **`grandmas_response`**
 
   We'll use the `grandmas_response` method to determine how Grandma will respond to user input.  We'll pass an argument to the method, and the method will return the appropriate response based on the rules for our application.
-  
+
 RSpec tests have been provided in the file `/source/spec/deaf_grandma_spec.rb` to guide us through writing these methods.  When the tests pass, our methods should be behaving as described.
 
 
