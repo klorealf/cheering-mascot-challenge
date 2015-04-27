@@ -1,5 +1,5 @@
-require_relative "deaf_grandma"
+require_relative "mascot"
 
-# This line calls the deaf_grandma method,
-# starting the conversation.
-deaf_grandma
+# This line calls the coordinate_cheers method,
+# starting the cheers.
+coordinate_cheers
