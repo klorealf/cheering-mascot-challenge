@@ -5,7 +5,7 @@ describe "deaf grandma helpers" do
 
     before(:each) do
       # Make up a string to use in the tests
-      @random_string = Array.new(2) { ("A".."F").to_a.sample }.join
+      @random_string = ("A".."F").to_a.sample(2).join
 
       # I want to fake user input during tests,
       # so when gets is called, just send back
