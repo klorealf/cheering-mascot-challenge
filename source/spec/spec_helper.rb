@@ -1,1 +1,1 @@
-require_relative "../deaf_grandma"
+require_relative "../mascot"
