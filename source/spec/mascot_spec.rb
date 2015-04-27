@@ -1,7 +1,7 @@
 require_relative "spec_helper"
 
-describe "deaf grandma helpers" do
-  describe "say_something" do
+describe "mascot helpers" do
+  describe "call_out_cheer" do
 
     before(:each) do
       # Make up a string to use in the tests
@@ -15,41 +15,34 @@ describe "deaf grandma helpers" do
 
     it "calls for user input" do
       # I expect the program to call gets on the main object
-      # as a result of calling say_something.
+      # as a result of calling call_out_cheer.
       expect_any_instance_of(Object).to receive(:gets)
 
-      # Now call say_something to trigger the gets call
-      say_something
+      # Now call call_out_cheer to trigger the gets call
+      call_out_cheer
     end
 
     it "returns user input without newline characters at the end" do
-      expect(say_something).to eq @random_string
+      expect(call_out_cheer).to eq @random_string
     end
   end
 
   describe "display" do
     it "outputs its argument to the console" do
-      # I expect the program to call puts on the main object
-      # as a result of calling display.  In addition,
-      # I expect the argument passed when puts is called
-      # to be equal to the argument passed to display.
-      expect_any_instance_of(Object).to receive(:puts).with("output string")
-
-      # Now call display to trigger the puts call
-      display("output string")
+      expect { display "output string" }.to output("output string").to_stdout
     end
   end
 
-  describe "grandmas_response" do
-    context "when input is shouted" do
-      it "responds as if Grandma understood" do
-        expect(grandmas_response("SHOUTING")).to eq "NO, NOT SINCE 1983!"
+  describe "mascot_sign_for" do
+    context "when cheer is shouted" do
+      it "responds as if the mascot understood" do
+        expect(mascot_sign_for("SHOUTING")).to eq "NO, NOT SINCE 1983!"
       end
     end
 
-    context "when input is not shouted" do
-      it "responds as if Grandma couldn't understand" do
-        expect(grandmas_response("not shouting")).to eq "HUH!? SPEAK UP, SONNY?"
+    context "when cheer is not shouted" do
+      it "responds as if mascot couldn't understand" do
+        expect(mascot_sign_for("not shouting")).to eq "Go, Team!"
       end
     end
   end
