@@ -29,14 +29,14 @@ describe "mascot helpers" do
 
   describe "display" do
     it "outputs its argument to the console" do
-      expect { display "Team!" }.to output(/Team!/).to_stdout
+      expect { display "Go Team!" }.to output(/Go Team!/).to_stdout
     end
   end
 
   describe "mascot_sign_for" do
     context "when the mascot doesn't know the cheer" do
       it "responds with a generic sign" do
-        expect(mascot_sign_for "UNKNOWN CHEER").to eq "Team!"
+        expect(mascot_sign_for "UNKNOWN CHEER").to eq "Go Team!"
       end
     end
 
@@ -52,10 +52,10 @@ describe "mascot helpers" do
 
       context "when cheer call is not shouted" do
         it "responds with a generic sign" do
-          expect(mascot_sign_for("red hot")).to eq "Team!"
-          expect(mascot_sign_for("do it again")).to eq "Team!"
-          expect(mascot_sign_for("2 bits")).to eq "Team!"
-          expect(mascot_sign_for("stomp your feet")).to eq "Team!"
+          expect(mascot_sign_for("red hot")).to eq "Go Team!"
+          expect(mascot_sign_for("do it again")).to eq "Go Team!"
+          expect(mascot_sign_for("2 bits")).to eq "Go Team!"
+          expect(mascot_sign_for("stomp your feet")).to eq "Go Team!"
         end
       end
     end
