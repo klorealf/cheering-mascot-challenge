@@ -72,7 +72,7 @@ To begin cheering, run `ruby runner.rb` from within the `source` directory.
 
 The rules have changed.  We now need a second way to end a conversation (i.e., exit the program).  Users can end the conversation by not calling for another cheer.
 
-Update the `coordinate_cheers` method to model this behavior: when prompted to say something to Grandma, entering an empty string *twice in a row* causes the program to exit.
+Update the `coordinate_cheers` method to model this behavior: when prompted to call out a cheer, entering an empty string *twice in a row* causes the program to exit.
 
 
 ## Conclusion
