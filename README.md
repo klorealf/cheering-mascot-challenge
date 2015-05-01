@@ -1,10 +1,10 @@
-# Deaf Grandma
+# Cheering Mascot
 
 ##Summary
 
-In this challenge we'll model a conversation based on a handful of rules, which will be explained to you.  We will be writing Ruby, employing and building on the skills that we've already developed.
+In this challenge we'll model some behavior based on a handful of rules, which will be explained to you.  We will be writing Ruby, employing and building on the skills that we've already developed.
 
-The main focus of this challenge is flow control.  For example, we will need to determine how to control how long our program runs.  And, our program will  behave differently under one condition than it will under another.  We'll be using these same techniques to write more complex algorithms throughout Dev Bootcamp.
+The main focus of this challenge is flow control.  For example, we will need to determine how to control how long our program runs.  And, our program will behave differently under one condition than it will under another.  We'll be using these same techniques to write more complex algorithms throughout Dev Bootcamp.
 
 In addition to flow control, we'll need to handle user interaction.  We'll have to get input from users and also display text back to the user.  Furthermore were going to practice writing small methods, each of which does one thing.
 
@@ -17,57 +17,62 @@ The following resources might be helpful to you.
 
 
 ### Rules
-Here are the rules for how our conversations need to operate.  While these rules might feel a little arbitrary, we are practicing writing to specifications.
+We are leading some cheers, and we have a mascot helping us by holding up signs that correspond to our cheers.  Here are the rules for how the mascot behaves.  While these rules might feel a little arbitrary, we are practicing writing to specifications.
 
+-  The cheering only ends (i.e., the program exits) when we call out, "GAME OVER".
 
-* Shouting is the only way for Grandma to hear us; we shout by typing in all caps.  If we shout at her, she responds by shouting back.
+- Shouting is the only way for the mascot to hear us; we shout by typing in all caps.  If we shout out the name of a cheer, the mascot responds with the appropriate sign.  For example, if we call out for the "RED HOT" cheer, the mascot holds up the "H-O-T!" sign.
 
-  For example, if we say, "HOW ARE YOU, GRANDMA?", Grandma replies, "NO, NOT SINCE 1983!".
+- If we call out a cheer without shouting, the mascot doesn't understand us and holds up a generic sign.  For example, if we call out for the "red hot" cheer, the mascot holds up the "Go Team!" sign.
+  
+- The mascot only knows a handful of cheers.  If we call out for a cheer the mascot doesn't know, it responds with the generic "Go Team!" sign.
 
-* If we say something to Grandma without shouting, she will shout back and tell us to speak up.
+  | KNOWN CHEER     | SIGN           |
+  | :-------------: | :------------: |
+  | RED HOT         | H-O-T!         |
+  | DO IT AGAIN     | Go, Fight, Win |
+  | 2 BITS          | Holler!        |
+  | STOMP YOUR FEET | STOMP!         |
 
-  If we say, "How are you, Grandma?", Grandma replies, "HUH!? SPEAK UP, SONNY?".
-
-*  The conversation only ends (i.e., the program exits) when we say, "LOVE YA, GRANDMA, BUT GOTTA GO."
-
+  *Table 1*.  Cheers known by the mascot and their corresponding signs.
 
 ##Releases
 
 ### Release 0: Helper Methods
 
-Take a look at the `source/deaf_grandma.rb` file.  Four empty methods are defined.  During this challenge, we'll flesh these out, and we'll begin with the `say_something`, `grandmas_response`, and `display` methods.  Each of these methods will do one thing, providing a specific piece of functionality that the `deaf_grandma` method will use.
+Take a look at the `source/mascot.rb` file.  Four empty methods are defined.  During this challenge, we'll flesh these out, and we'll begin with the `call_out_cheer`, `mascot_sign_for`, and `display` methods.  Each of these methods will do one thing, providing a specific piece of functionality that the `coordinate_cheers` method will use.
 
-- **`say_something`**
+- **`call_out_cheer`**
 
-  We'll use the `say_something` method when we need the user to say something to Grandma.  The method should get user input and return that input.
+  We'll use the `call_out_cheer` method when we need the user to specify a cheer.  The method should get user input and return that input.
 
 - **`display`**
 
-  We'll use the `display` method when we need to print information for the user to see—for example, Grandma's responses.  The method should take an argument and print it out.
+  We'll use the `display` method when we need to print information for the user to see—for example, the sign the mascot holds up.  The method should take an argument and print it out.
 
-- **`grandmas_response`**
+- **`mascot_sign_for`**
 
-  We'll use the `grandmas_response` method to determine how Grandma will respond to user input.  We'll pass an argument to the method, and the method will return the appropriate response based on the rules for our application.
+  We'll use the `mascot_sign_for` method to determine how the mascot will respond to user input.  We'll pass an argument to the method, and the method will return the appropriate response based on the rules for our application.
 
-RSpec tests have been provided in the file `/source/spec/deaf_grandma_spec.rb` to guide us through writing these methods.  When the tests pass, our methods should be behaving as described.
+RSpec tests have been provided in the file `/source/spec/mascot_spec.rb` to guide us through writing these methods.  When the tests pass, our methods should be behaving as described.
 
 
-### Release 1: Conversing with Grandma
+### Release 1: Calling Out Multiple Cheers
 
-After our helper methods are in place, it's time to write the `deaf_grandma` method.  This is the method that is going to coordinate conversations between our users and Grandma.
+After our helper methods are in place, it's time to write the `coordinate_cheers` method.  This is the method that is going to coordinate us calling out cheers and the mascots responses.
 
-When we call the `deaf_grandma` method, as is done at the bottom of `source/runner.rb` file, we should find ourselves in a conversation that conforms to the rules described in the *Summary*.
+When we call the `coordinate_cheers` method, as is done at the bottom of `source/runner.rb` file, we should find ourselves in a setting that conforms to the rules described in the *Summary*.  Until we call out "GAME OVER", we should be calling out cheers and the mascot should be responding appropriately to each call.
 
-To begin a conversation, run `ruby runner.rb` from within the `source` directory.
+To begin cheering, run `ruby runner.rb` from within the `source` directory.
 
 
 ### Release 2: Changing Specifications
 
-- The conversation ends if nothing is said to Grandma two times in a row.
+- The cheering ends if no cheer is called out two times in a row.
 
-The rules have changed.  We now need a second way to end a conversation (i.e., exit the program).  Users can end the conversation by silently slipping away.
+The rules have changed.  We now need a second way to end a conversation (i.e., exit the program).  Users can end the conversation by not calling for another cheer.
 
-Update the `deaf_grandma` method to model this behavior: when prompted to say something to Grandma, entering an empty string *twice in a row* causes the program to exit.
+Update the `coordinate_cheers` method to model this behavior: when prompted to call out a cheer, entering an empty string *twice in a row* causes the program to exit.
 
 
 ## Conclusion

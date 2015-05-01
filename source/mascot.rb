@@ -1,21 +1,10 @@
-# Run this file via the command line (Terminal) like so:
-#   $ ruby deaf_grandma.rb
-#
-# Your program should get user input which corresponds
-# to you saying something to Grandma. Grandma should respond
-# differently depending on the input you provide, or the
-# program should exit.  See the README file for detailed rules.
-
-
-
-
-# Get input from the user--what is said to grandma
-def say_something
+# Get input from the user:  the cheer
+def call_out_cheer
 end
 
-# Determine Grandma's response based on the argument
+# Determine the mascot's response based on the argument
 # passed to the method
-def grandmas_response(input)
+def mascot_sign_for(input)
 end
 
 # Print the argument passed to the method
@@ -24,5 +13,5 @@ end
 
 # This method will control the flow of the application,
 # making use of the other three methods.
-def deaf_grandma
+def coordinate_cheers
 end
