@@ -40,7 +40,7 @@ We are leading some cheers, and we have a mascot helping us by holding up signs 
 
 ### Release 0: Helper Methods
 
-Take a look at the `source/mascot.rb` file.  Four empty methods are defined.  During this challenge, we'll flesh these out, and we'll begin with the `call_out_cheer`, `mascot_sign_for`, and `display` methods.  Each of these methods will do one thing, providing a specific piece of functionality that the `coordinate_cheers` method will use.
+Take a look at the `mascot.rb` file.  Four empty methods are defined.  During this challenge, we'll flesh these out, and we'll begin with the `call_out_cheer`, `mascot_sign_for`, and `display` methods.  Each of these methods will do one thing, providing a specific piece of functionality that the `coordinate_cheers` method will use.
 
 - **`call_out_cheer`**
 
@@ -54,16 +54,16 @@ Take a look at the `source/mascot.rb` file.  Four empty methods are defined.  Du
 
   We'll use the `mascot_sign_for` method to determine how the mascot will respond to user input.  We'll pass an argument to the method, and the method will return the appropriate response based on the rules for our application.
 
-RSpec tests have been provided in the file `/source/spec/mascot_spec.rb` to guide us through writing these methods.  When the tests pass, our methods should be behaving as described.
+RSpec tests have been provided in the file `spec/mascot_spec.rb` to guide us through writing these methods.  When the tests pass, our methods should be behaving as described.
 
 
 ### Release 1: Calling Out Multiple Cheers
 
 After our helper methods are in place, it's time to write the `coordinate_cheers` method.  This is the method that is going to coordinate us calling out cheers and the mascots responses.
 
-When we call the `coordinate_cheers` method, as is done at the bottom of `source/runner.rb` file, we should find ourselves in a setting that conforms to the rules described in the *Summary*.  Until we call out "GAME OVER", we should be calling out cheers and the mascot should be responding appropriately to each call.
+When we call the `coordinate_cheers` method, as is done at the bottom of the `runner.rb` file, we should find ourselves in a setting that conforms to the rules described in the *Summary*.  Until we call out "GAME OVER", we should be calling out cheers and the mascot should be responding appropriately to each call.
 
-To begin cheering, run `ruby runner.rb` from within the `source` directory.
+To begin cheering, run `ruby runner.rb`.
 
 
 ### Release 2: Changing Specifications
