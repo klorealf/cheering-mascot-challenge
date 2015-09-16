@@ -6,7 +6,7 @@ In this challenge we'll model some behavior based on a handful of rules, which w
 
 The main focus of this challenge is flow control.  For example, we will need to determine how to control how long our program runs.  And, our program will behave differently under one condition than it will under another.  We'll be using these same techniques to write more complex algorithms throughout Dev Bootcamp.
 
-In addition to flow control, we'll need to handle user interaction.  We'll have to get input from users and also display text back to the user.  Furthermore were going to practice writing small methods, each of which does one thing.
+In addition to flow control, we'll need to handle user interaction.  We'll have to get input from users and also display text back to the user.  Furthermore we're going to practice writing small methods, each of which does one thing.
 
 The following resources might be helpful to you.
 
@@ -24,7 +24,7 @@ We are leading some cheers, and we have a mascot helping us by holding up signs 
 - Shouting is the only way for the mascot to hear us; we shout by typing in all caps.  If we shout out the name of a cheer, the mascot responds with the appropriate sign.  For example, if we call out for the "RED HOT" cheer, the mascot holds up the "H-O-T!" sign.
 
 - If we call out a cheer without shouting, the mascot doesn't understand us and holds up a generic sign.  For example, if we call out for the "red hot" cheer, the mascot holds up the "Go Team!" sign.
-  
+
 - The mascot only knows a handful of cheers.  If we call out for a cheer the mascot doesn't know, it responds with the generic "Go Team!" sign.
 
   | KNOWN CHEER     | SIGN           |
@@ -59,7 +59,7 @@ RSpec tests have been provided in the file `spec/mascot_spec.rb` to guide us thr
 
 ### Release 1: Calling Out Multiple Cheers
 
-After our helper methods are in place, it's time to write the `coordinate_cheers` method.  This is the method that is going to coordinate us calling out cheers and the mascots responses.
+After our helper methods are in place, it's time to write the `coordinate_cheers` method.  This is the method that is going to coordinate us calling out cheers and the mascot's responses.
 
 When we call the `coordinate_cheers` method, as is done at the bottom of the `runner.rb` file, we should find ourselves in a setting that conforms to the rules described in the *Summary*.  Until we call out "GAME OVER", we should be calling out cheers and the mascot should be responding appropriately to each call.
 
