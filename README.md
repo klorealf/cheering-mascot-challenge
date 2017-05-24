@@ -1,6 +1,6 @@
 # Cheering Mascot
 
-##Summary
+## Summary
 
 In this challenge we'll model some behavior based on a handful of rules, which will be explained to you.  We will be writing Ruby, employing and building on the skills that we've already developed.
 
@@ -36,7 +36,7 @@ We are leading some cheers, and we have a mascot helping us by holding up signs 
 
   *Table 1*.  Cheers known by the mascot and their corresponding signs.
 
-##Releases
+## Releases
 
 ### Release 0: Helper Methods
 
