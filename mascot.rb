@@ -18,6 +18,8 @@ def mascot_sign_for(input)
     p 'Holler!'
   when 'STOMP YOUR FEET'
     p 'STOMP!'
+  when 'GAME OVER'
+    p  'GAME OVER!'
   else
     p 'Go Team!'
   end
@@ -33,6 +35,14 @@ end
 # This method will control the flow of the application,
 # making use of the other three methods.
 def coordinate_cheers
+  user_input = call_out_cheer
+  mascot_sign_for(user_input)
+  until user_input == "GAME OVER"
+    user_input = call_out_cheer
+  mascot_sign_for(user_input)
+  end
 end
+
+
 
 
