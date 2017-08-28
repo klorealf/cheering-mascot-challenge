@@ -1,10 +1,11 @@
 # Get input from the user:  the cheer
 def call_out_cheer
-  puts "What would you like to cheer?"
-  $response = gets.chomp
-  if $response != "GAME OVER"
-    return $response
-  end
+  gets.chomp
+  # puts "What would you like to cheer?"
+  # $response = gets.chomp
+  # if $response != "GAME OVER"
+  #   return $response
+  # end
 end
 
 # Determine the mascot's response based on the argument
@@ -31,8 +32,25 @@ end
 # This method will control the flow of the application,
 # making use of the other three methods.
 def coordinate_cheers
- call_out_cheer
- display($response)
+puts "Get Cheer"
+cheer = call_out_cheer
+is_there_a_cheer = 0
+until cheer == "GAME OVER" || is_there_a_cheer == 1
+  if cheer == ""
+    is_there_a_cheer += 1
+    puts "Get Cheer"
+    cheer = call_out_cheer
+  else
+    display(cheer)
+    puts "Get Cheer"
+    cheer = call_out_cheer
+    is_there_a_cheer = 0
+  end
+end
+
+
+ # call_out_cheer
+ # display($response)
 
 end
 
