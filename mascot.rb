@@ -15,6 +15,10 @@ def mascot_sign_for(input)
     mascot_response = "Holler!"
   elsif input == "STOMP YOUR FEET"
     mascot_response = "STOMP!"
+  elsif input == "GAME OVER"
+    mascot_response = "Thanks for cheering"
+  elsif input == ""
+   mascot_response = "Huh?"
   else mascot_response = "Go Team!"
   end
   return mascot_response
@@ -30,10 +34,13 @@ end
 def coordinate_cheers
   input_counter = 0
   input = ""
-  until input == "GAME OVER"
+  until input == "GAME OVER" || input_counter >= 2
+  if input == ""
+    input_counter += 1
     input = call_out_cheer
     mascot_response = mascot_sign_for(input)
     display(mascot_response)
+   end
   end
 end
 
