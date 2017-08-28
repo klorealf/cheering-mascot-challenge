@@ -32,10 +32,20 @@ end
 # making use of the other three methods.
 def coordinate_cheers
   loop do
+    puts 'Type a cheer.'
     input = gets.chomp
     p mascot_sign_for(input)
     if input == "GAME OVER"
       break
+    end
+    if input == ""
+      puts 'Type a cheer.'
+      input = gets.chomp
+      if input == ""
+        break
+      else
+        p mascot_sign_for(input)
+      end
     end
   end
 end
