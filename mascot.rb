@@ -1,3 +1,5 @@
+
+#Paired with Thierry Moudiki
 # Get input from the user:  the cheer
 def call_out_cheer
   puts "Specify a cheer!"
@@ -45,9 +47,9 @@ def coordinate_cheers
   mascot_sign_for(user_input)
 
   until  (array_inputs[0]== ' ' && array_inputs[1]== ' ') || user_input == 'GAME OVER'
-    array_inputs[0] = user_input
+    array_inputs[0] = user_input # Storing the first input
     user_input = call_out_cheer
-    array_inputs[1] = user_input
+    array_inputs[1] = user_input # Storing the second input
     # puts "array_inputs 0"
     # puts array_inputs[0]
     # puts "array_inputs 1"
