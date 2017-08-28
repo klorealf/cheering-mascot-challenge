@@ -1,8 +1,10 @@
 # Get input from the user:  the cheer
 def call_out_cheer
   puts "What would you like to cheer?"
-  response = gets.chomp
-  return response
+  $response = gets.chomp
+  if $response != "GAME OVER"
+    return $response
+  end
 end
 
 # Determine the mascot's response based on the argument
@@ -16,7 +18,7 @@ def mascot_sign_for(input)
     "Holler!"
   elsif input == "STOMP YOUR FEET"
     "STOMP!"
-  else
+  elsif input != "GAME OVER!"
     "Go Team!"
   end
 end
@@ -29,6 +31,9 @@ end
 # This method will control the flow of the application,
 # making use of the other three methods.
 def coordinate_cheers
+ call_out_cheer
+ display($response)
+
 end
 
 
