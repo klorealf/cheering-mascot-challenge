@@ -2,6 +2,7 @@
 def call_out_cheer
   puts "Specify a cheer!"
  user_input = gets.chomp
+
  return user_input
 end
 
@@ -11,17 +12,17 @@ end
 def mascot_sign_for(input)
   case input
   when 'RED HOT'
-    p 'H-O-T!'
+    display('H-O-T!')
   when 'DO IT AGAIN'
-    p 'Go, Fight, Win'
+    display('Go, Fight, Win')
   when '2 BITS'
-    p 'Holler!'
+    display('Holler!')
   when 'STOMP YOUR FEET'
-    p 'STOMP!'
+    display('STOMP!')
   when 'GAME OVER'
-    p  'GAME OVER!'
+    display('GAME OVER!')
   else
-    p 'Go Team!'
+    display('Go Team!')
   end
 
 end
@@ -29,16 +30,28 @@ end
 
 # Print the argument passed to the method
 def display(response)
-  puts response
+ p response
 end
+
 
 # This method will control the flow of the application,
 # making use of the other three methods.
 def coordinate_cheers
+  array_inputs = ['', '']
   user_input = call_out_cheer
+  array_inputs[0] = user_input
+  array_inputs[1] = ''
+
   mascot_sign_for(user_input)
-  until user_input == "GAME OVER"
+
+  until  (array_inputs[0]== ' ' && array_inputs[1]== ' ') || user_input == 'GAME OVER'
+    array_inputs[0] = user_input
     user_input = call_out_cheer
+    array_inputs[1] = user_input
+    # puts "array_inputs 0"
+    # puts array_inputs[0]
+    # puts "array_inputs 1"
+    # puts array_inputs[1]
   mascot_sign_for(user_input)
   end
 end
