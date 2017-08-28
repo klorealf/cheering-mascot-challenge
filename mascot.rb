@@ -1,14 +1,27 @@
 # Get input from the user:  the cheer
 def call_out_cheer
+  gets.chomp
 end
 
 # Determine the mascot's response based on the argument
 # passed to the method
 def mascot_sign_for(input)
+  if input == "RED HOT"
+    "H-O-T!"
+  elsif input == "DO IT AGAIN"
+    "Go, Fight, Win"
+  elsif input == "2 BITS"
+    "Holler!"
+  elsif input == "STOMP YOUR FEET"
+    "STOMP!"
+  else
+    "Go Team!"
+  end
 end
 
 # Print the argument passed to the method
 def display(response)
+  puts mascot_sign_for(response)
 end
 
 # This method will control the flow of the application,
