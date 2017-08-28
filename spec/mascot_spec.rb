@@ -1,6 +1,6 @@
 require_relative "spec_helper"
 
-describe "mascot helpers" do
+describe "mascot lshelpers" do
   describe "call_out_cheer" do
 
     before(:each) do
