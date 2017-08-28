@@ -27,4 +27,11 @@ end
 # This method will control the flow of the application,
 # making use of the other three methods.
 def coordinate_cheers
+puts "What should we cheer?"
+cheer = call_out_cheer
+until cheer == "GAME OVER"
+  display(cheer)
+  puts "What should we cheer?"
+  cheer = call_out_cheer
+end
 end
